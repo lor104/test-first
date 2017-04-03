@@ -22,7 +22,7 @@ class TestTemperature < MiniTest::Test
     assert_equal 37, ftoc(98.6)
   end
 
-  def test_ftoc_convers_arbitrary_temperature
+  def test_ftoc_converts_arbitrary_temperature
     assert_equal 20, ftoc(68)
   end
 
