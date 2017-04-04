@@ -1,5 +1,5 @@
 require './test_helper'
-require 'temperature'
+require_relative 'temperature'
 
 # Note: This is the last problem, and it is quite hard!
 # Take your time, don't be scared to ask for help–
