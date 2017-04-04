@@ -2,7 +2,7 @@ require './test_helper'
 # In this problem we are going to make a calculator.
 
 # Remember to create the file!
-require 'calculator'
+require_relative 'calculator'
 
 class TestCalculator < MiniTest::Test
   # add takes two parameters and adds them
