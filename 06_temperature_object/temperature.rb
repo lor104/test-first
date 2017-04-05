@@ -11,24 +11,26 @@ class Temperature
   end
 
   def to_celsius
-    if self.temp.has_key?(:c)
+    array = self.temp.keys
+    if array.include?(:c)
       return self.temp[:c]
     end
     self.temp[:f] = (self.temp[:f] - 32) * 5.0/9
   end
 
   def to_fahrenheit
-    if self.temp.has_key?(:f)
+    array = self.temp.keys
+    if array.include?(:f)
       return self.temp[:f]
     end
     self.temp[:c] = (self.temp[:c] * 9.0/5) + 32
   end
 
-  def in_fahrenheit(temp_new)
+  def self.in_fahrenheit(temp_new)
     temperature = self.new({:f => temp_new})
   end
 
-  def in_celsius(temp_new)
+  def self.in_celsius(temp_new)
     temperature = self.new({:c => temp_new})
   end
 
@@ -42,3 +44,7 @@ end
 class Fahrenheit < Temperature
 
 end
+
+#irb code tests
+ # array = self.temp.keys
+ # array.include?(:c)
