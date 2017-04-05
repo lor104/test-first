@@ -1,5 +1,6 @@
 require './test_helper'
 require_relative 'temperature'
+require 'pry'
 
 # Note: This is the last problem, and it is quite hard!
 # Take your time, don't be scared to ask for help–
@@ -89,6 +90,7 @@ class TestTemperature < MiniTest::Test
 
   #  Temperature subclasses
   def test_celsius_subclass_initialize
+    # binding.pry
     assert_equal 50, Celsius.new(50).to_celsius
     assert_equal 122, Celsius.new(50).to_fahrenheit
 

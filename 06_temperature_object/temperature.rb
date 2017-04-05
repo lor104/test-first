@@ -38,11 +38,15 @@ end
 
 
 class Celsius < Temperature
-
+  def initialize(temp)
+    @temp = {:c => temp}
+  end
 end
 
 class Fahrenheit < Temperature
-
+  def initialize(temp)
+    @temp = {:f => temp}
+  end
 end
 
 #irb code tests
