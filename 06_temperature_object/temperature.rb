@@ -11,10 +11,16 @@ class Temperature
   end
 
   def to_celsius
+    if self.temp.has_key?(:c)
+      return self.temp[:c]
+    end
     self.temp[:f] = (self.temp[:f] - 32) * 5.0/9
   end
 
   def to_fahrenheit
+    if self.temp.has_key?(:f)
+      return self.temp[:f]
+    end
     self.temp[:c] = (self.temp[:c] * 9.0/5) + 32
   end
 
@@ -34,5 +40,5 @@ class Celcius < Temperature
 end
 
 class Fahrenheit < Temperature
-  
+
 end
