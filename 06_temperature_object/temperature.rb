@@ -35,7 +35,7 @@ class Temperature
 end
 
 
-class Celcius < Temperature
+class Celsius < Temperature
 
 end
 
